@@ -1,11 +1,11 @@
-About pyirf
-===========
+About pyirf-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyirf-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/cta-observatory/pyirf
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyirf-feedstock/blob/main/LICENSE.txt)
 
 Summary: A python library to calculate IACT IRFs and Sensitivities
 
