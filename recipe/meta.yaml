@@ -1,5 +1,5 @@
 {% set name = "pyirf" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyirf-{{ version }}.tar.gz
-  sha256: e2b00befefedf823984848073ae8b422d5f9ce40e33b4ae06af913b04bd39889
+  sha256: 3a798ed3c619f48858aa0a5c4be53db302785381b8b9c94bb7e2e67ae55b5fef
 
 build:
   noarch: python
