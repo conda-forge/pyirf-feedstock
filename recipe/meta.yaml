@@ -1,12 +1,13 @@
 {% set name = "pyirf" %}
 {% set version = "0.12.0" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyirf-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyirf-{{ version }}.tar.gz
   sha256: 8ae593767d9a765bfa4202e9ee42def583490b4f0bc9cbd0d98c563d05f3f251
 
 build:
@@ -16,17 +17,17 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
+    - setuptools
     - setuptools-scm
     - pip
   run:
-    - python >=3.9
-    - astropy >=5.3
-    - matplotlib-base
+    - python >={{ python_min }}
+    - astropy >=5.3,<7.0.0a0
     - numpy >=1.18
     - scipy
     - tqdm
-    - setuptools-scm
+    - packaging
 
 test:
   imports:
@@ -36,6 +37,7 @@ test:
     # check setuptools-scm version works
     - python -c "from pyirf import __version__; assert '0.0.0' not in __version__"
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
