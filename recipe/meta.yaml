@@ -23,8 +23,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - astropy-base >=5.3,<7.0.0a0
-    - numpy >=1.18
+    - astropy-base >=5.3,<8.0.0a0
+    - numpy >=1.21
     - scipy
     - tqdm
     - packaging
