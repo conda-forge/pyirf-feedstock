@@ -1,6 +1,6 @@
 {% set name = "pyirf" %}
-{% set version = "0.13.0" %}
-{% set python_min = "3.10" %}
+{% set version = "0.14.0" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyirf-{{ version }}.tar.gz
-  sha256: 0b50404d22219ffd8e88405104520002836e63eae488c4b920879989db67e89f
+  sha256: 3756ab00fab97cc9ec962d176578074daa44788ef605d769a390011ee8717a6e
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - astropy-base >=5.3,<8.0.0a0
+    - astropy-base >=5.3,<9.0.0a0
     - numpy >=1.21
     - scipy
     - tqdm
