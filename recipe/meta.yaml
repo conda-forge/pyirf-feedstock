@@ -1,6 +1,6 @@
 {% set name = "pyirf" %}
 {% set version = "0.14.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - astropy-base >=5.3,<8.0.0a0
+    - astropy-base >=5.3,<9.0.0a0
     - numpy >=1.21
     - scipy
     - tqdm
